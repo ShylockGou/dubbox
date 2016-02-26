@@ -20,10 +20,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="cache-consumer"  />
-
-	<dubbo:registry address="zookeeper://zk.iw.com:2181" />
+    <dubbo:application name="trace-provider"  />
     
-	<dubbo:reference id="cacheService" interface="com.alibaba.dubbo.examples.cache.api.CacheService" cache="true" />
+    <dubbo:registry address="zookeeper://zk.iw.com:2181" />
 
+    <dubbo:protocol name="dubbo" port="20880" />
+    
+	<bean id="traceService" class="com.alibaba.dubbo.examples.trace.impl.TraceServiceImpl" />
+	
+	<dubbo:service interface="com.alibaba.dubbo.examples.trace.api.TraceService" ref="traceService" trace="true" timeout="1000000" />
+	
 </beans>

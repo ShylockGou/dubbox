@@ -15,6 +15,7 @@
  */
 package com.alibaba.dubbo.demo.user;
 
+import com.alibaba.dubbo.trace.Trace;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -31,6 +32,9 @@ public class UserServiceImpl implements UserService {
 
     public Long registerUser(User user) {
 //        System.out.println("Username is " + user.getName());
+        String traceId =  Trace.getTraceId();
+
+        System.out.println("traceId = " + traceId);
         return idGen.incrementAndGet();
     }
 }

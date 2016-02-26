@@ -69,6 +69,11 @@
 				<xsd:documentation><![CDATA[ Use service cache, lru/threadlocal/jcache. ]]></xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
+		<xsd:attribute name="trace" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[true or false to enable trace ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
 	</xsd:complexType>
 	
 	<xsd:complexType name="abstractInterfaceType">

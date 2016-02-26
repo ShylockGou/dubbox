@@ -15,6 +15,9 @@
  */
 package com.alibaba.dubbo.demo.hello;
 
+import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
+
 /**
  * @author lishen
  */

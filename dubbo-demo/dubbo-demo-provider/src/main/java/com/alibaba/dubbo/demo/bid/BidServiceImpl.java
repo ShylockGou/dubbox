@@ -15,6 +15,8 @@
  */
 package com.alibaba.dubbo.demo.bid;
 
+import com.alibaba.dubbo.trace.Trace;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,9 @@ public class BidServiceImpl implements BidService {
         seatBids.add(seatBid);
 
         response.setSeatBids(seatBids);
+        String traceId =  Trace.getTraceId();
 
+        System.out.println("traceId = " + traceId);
         return response;
     }
 

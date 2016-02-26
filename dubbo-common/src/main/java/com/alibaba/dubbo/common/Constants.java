@@ -57,6 +57,8 @@ public class Constants {
 
     public static final String  CACHE_KEY                          = "cache";
 
+    public static final String  TRACE_KEY                          = "trace";
+
     public static final String  DYNAMIC_KEY                        = "dynamic";
 
     public static final String  DUBBO_PROPERTIES_KEY               = "dubbo.properties.file";
