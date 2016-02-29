@@ -29,7 +29,7 @@ import static com.alibaba.dubbo.trace.Trace.TRACE_ID;
  *
  * @author william.liangf
  */
-@Activate( value = Constants.TRACE_KEY)
+@Activate(group = {Constants.PROVIDER, Constants.CONSUMER}, value = Constants.TRACE_KEY)
 public class TrackFilter implements Filter {
 
 
