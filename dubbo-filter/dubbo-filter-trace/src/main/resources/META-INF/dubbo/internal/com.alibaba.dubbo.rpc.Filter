@@ -1,1 +1,1 @@
-trace=com.alibaba.dubbo.trace.filter.TrackFilter
+track=com.alibaba.dubbo.trace.filter.TrackFilter
