@@ -30,7 +30,7 @@ import static com.alibaba.dubbo.trace.Trace.TRACE_ID;
  * @author william.liangf
  */
 @Activate( value = Constants.TRACE_KEY)
-public class TraceFilter implements Filter {
+public class TrackFilter implements Filter {
 
 
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
